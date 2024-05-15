@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1px" width="100%">
+    <tr>
+        <th>Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Confirm password</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    <% fileData.forEach((student, i) => { %>
+        <tr>
+            <td><%=student.name%></td>
+            <td><%=student.lastName%></td>
+            <td><%=student.email%></td>
+            <td><%=student.password%></td>
+            <td><%=student.confirmPassword%></td>
+            <td>edit</td>
+            <td><a href="/brishi?i=<%=i%>">Delete</a></td>
+        </tr>
+    <%}); %>
+    </table>
+    <button><a href="/form">Enter new Student</a></button>
+</body>
+</html>
